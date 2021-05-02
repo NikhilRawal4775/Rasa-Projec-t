@@ -1,0 +1,153 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: reservation
+  examples: |
+    - I want to reserve a table
+    - reserve a table
+    - book a table
+    - make reservation
+    - reservation
+
+- intent: thanks
+  examples: |
+    - thanks
+    - good work
+    - great, thanks
+    - thank you
+
+- intent: seats
+  examples: |
+    - [2](seats) seats
+    - [1](seats)
+    - [8](seats)
+    - [three](seats)
+    - [nine](seats)
+    - book [4](seats) seats
+    - let [1](seats) seat
+    - great, book [eight](seats) seats
+
+- intent: faq_one
+  examples: |
+    - What are your timings
+    - tell me your timings
+    - timings?
+    - in what time will you open?
+
+- intent: faq_two
+  examples: |
+    - What days are you open?
+    - days?
+    - tell me your working days?
+
+- intent: faq_three
+  examples: |
+    - How do I cancel a reservation?
+    - cancel reservation?
+    - please, cancel my reservation
+
+- intent: faq_four
+  examples: |
+    - What are the specials?
+    - specials?
+    - you are good at?
+    - best food
+    - specialist
+    - good at
+
+- intent: reservation_with_seats
+  examples: |
+    - I want to reserve a table for a party of [4](seats)
+    - reserve table for  [two](seats) people
+    - reserve table for [4](seats) people 
+    - I want to reserve a table for a party of [nine](seats)

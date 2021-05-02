@@ -1,0 +1,85 @@
+version: "2.0"
+
+# actions:
+#   - action_one
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - reservation
+  - thanks
+  - seats
+  - faq_one
+  - faq_two
+  - faq_three
+  - faq_four
+  - reservation_with_seats
+
+entities:
+  - seats
+  - my_type
+  
+slots:
+  seats:
+    type: any
+    auto_fill: True
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_you_are_welcome:
+  - text : "You are welcome!"
+
+  utter_res1:
+  - text: "When would you like to book a reservation? (We are only open from 7pm to 10pm)"
+
+  utter_seats:
+  - text : "Which section would you like to book"
+    buttons:
+    - title: "AC"
+      payload: '/my_type{{my_type:"AC"}}'
+    - title: "non AC"
+      payload: '/my_type{{my_type:"non AC"}}'
+    
+    
+  utter_faq1:
+  - text: "The restaurant opens at 7pm and closes at 10pm."
+
+  utter_faq2:
+  - text: "The restaurant is open each and every day."
+  
+  utter_faq3:
+  - text: "To cancel a reservation, simply call us at +91 9876543210 and cancel your reservation"
+
+  utter_faq4:
+  - text: "Our chef is a master of the Italian cuisine. Our core speciality is our pasta, which is renowned throughout the city."
+
+  utter_reservation:
+  - text: "How many seats would you like to reserve"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

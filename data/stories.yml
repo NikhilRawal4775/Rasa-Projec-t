@@ -1,0 +1,91 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: reservation path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: reservation
+  - action: utter_reservation
+  - intent: seats
+  - action: utter_seats
+  # - action: action_one
+  - intent: thanks
+  - action: utter_you_are_welcome
+  - action: utter_goodbye
+
+- story: reservation path 2
+  steps:
+  - intent: reservation
+  - action: utter_reservation
+  - intent: seats
+  - action: utter_seats
+  # - action: action_one
+
+- story: reservation path 3
+  steps:
+  - intent: seats
+  - action: utter_seats
+  # - action: action_one
+
+- story: faq path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: faq_one
+  - action: utter_faq1
+  - intent: faq_two
+  - action: utter_faq2
+  - intent: faq_three
+  - action: utter_faq3
+  - intent: faq_four
+  - action: utter_faq4
+  - intent: thanks
+  - action: utter_you_are_welcome
+  - action: utter_goodbye
+
+- story: faq path 2
+  steps:
+  - intent: faq_two
+  - action: utter_faq2
+  - intent: faq_three
+  - action: utter_faq3
+  - intent: faq_one
+  - action: utter_faq1
+  - intent: faq_four
+  - action: utter_faq4
+
+- story: reservation_with_seats
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: reservation_with_seats
+  - action: utter_seats
